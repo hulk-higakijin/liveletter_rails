@@ -1,6 +1,12 @@
-<%= render Core::NavbarComponent.new %>
+<div class="container mx-auto max-w-3xl p-2 pt-10 md:pt-28">
+  <div class="flex gap-2">
+    <%= render Users::AvatarComponent.new %>
+    <span class="my-auto">higakijin</span>
+    <%= link_to "Create", "#", class: "btn btn-neutral btn-sm ml-auto" %>
+  </div>
+</div>
 
-<div class="container mx-auto max-w-3xl">
+<div class="container mx-auto max-w-3xl pt-10">
   <div class="grid md:grid-cols-3 gap-4">
     <%= render Posts::CardComponent.new %>
     <%= render Posts::CardComponent.new %>
