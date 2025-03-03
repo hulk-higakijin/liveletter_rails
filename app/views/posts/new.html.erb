@@ -1,0 +1,5 @@
+<%= form_with(model: @post, method: "POST") do |f| %>
+  <%= f.text_field :title, class: "input" %>
+  <%= f.text_field :emoji, class: "input" %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

@@ -2,14 +2,14 @@
   <div class="flex gap-2">
     <%= render Users::AvatarComponent.new %>
     <span class="my-auto">higakijin</span>
-    <%= link_to "Create", "#", class: "btn btn-neutral btn-sm ml-auto" %>
+    <%= link_to "Create", new_post_path, class: "btn btn-neutral btn-sm ml-auto" %>
   </div>
 </div>
 
 <div class="container mx-auto max-w-3xl pt-10">
   <div class="grid md:grid-cols-3 gap-4">
-    <%= render Posts::CardComponent.new %>
-    <%= render Posts::CardComponent.new %>
-    <%= render Posts::CardComponent.new %>
+    <% @posts.each do |post| %>
+      <%= render Posts::CardComponent.new %>
+    <% end %>
   </div>
 </div>

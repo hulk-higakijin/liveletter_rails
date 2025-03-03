@@ -17,7 +17,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_03_063924) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "emoji"
-    t.integer "status"
+    t.integer "status", default: 0
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
