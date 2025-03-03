@@ -38,5 +38,7 @@ module LiveletterRails
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.view_component.view_component_path = "app/views/components"
+    config.eager_load_paths << Rails.root.join("app/views/components")
   end
 end
