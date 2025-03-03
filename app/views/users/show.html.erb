@@ -1,4 +1,9 @@
 <%= render Core::NavbarComponent.new %>
-<h1>Users#show</h1>
-<%= @user.email %>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<div class="container mx-auto max-w-3xl">
+  <div class="grid md:grid-cols-3 gap-4">
+    <%= render Posts::CardComponent.new %>
+    <%= render Posts::CardComponent.new %>
+    <%= render Posts::CardComponent.new %>
+  </div>
+</div>
